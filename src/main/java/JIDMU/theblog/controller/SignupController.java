@@ -21,7 +21,9 @@ public class SignupController {
     }
 
     @PostMapping("/signup")
-    public String signupUser(@ModelAttribute User user, Model model) {
+    public String signupUser(@ModelAttribute User user,
+                             Model model,
+                             @ModelAttribute("confirmPassword") String passwordValidator) {
 
         String signupError = null;
 
@@ -30,15 +32,31 @@ public class SignupController {
         }
 
         if (signupError == null) {
-            int rowsAdded = signupService.createUser(user);
-            if (rowsAdded < 0) {
-                signupError = "There was an error signing you up. Please try again.";
+            String rowsAdded = signupService.createUser(user, passwordValidator);
+            switch (rowsAdded) {
+                case "error: 101":
+                    signupError = "Firstname must not be empty";
+                    break;
+                case "error: 102":
+                    signupError = "Lastname must not be empty";
+                    break;
+                case "error: 103":
+                    signupError = "Username must not be empty";
+                    break;
+                case "error: 104":
+                    signupError = "Password must not be empty";
+                    break;
+                case "error: 105":
+                    signupError = "Password confirmation fail";
+                    break;
             }
         }
 
         if (signupError == null) {
             model.addAttribute("signupSuccess", true);
-        } else {
+        }
+
+        else {
             model.addAttribute("signupError", signupError);
         }
 

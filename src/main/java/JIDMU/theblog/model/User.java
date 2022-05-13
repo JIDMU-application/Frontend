@@ -11,12 +11,11 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private String username;
     private String password;
-    private String confirmPassword;
     private String firstName;
     private String lastName;
+
 
     public int getId() {
         return id;
@@ -36,14 +35,6 @@ public class User {
 
     public String getPassword() {
         return password;
-    }
-
-    public String getConfirmPassword() {
-        return confirmPassword;
-    }
-
-    public void setConfirmPassword(String confirmPass) {
-        this.confirmPassword = confirmPass;
     }
 
     public void setPassword(String password) {
