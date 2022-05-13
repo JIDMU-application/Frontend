@@ -11,7 +11,7 @@ import org.springframework.validation.Validator;
 
 @Service
 public class SignupService {
-    
+
     @Autowired
     private UserRepository repository;
 
@@ -30,7 +30,12 @@ public class SignupService {
 
         String hashedPassword = passwordEncoder.encode(user.getPassword());
         newUser.setPassword(hashedPassword);
-        repository.save(newUser);
+        String hashedConfirmPassword = passwordEncoder.encode(user.getConfirmPassword());
+        newUser.setConfirmPassword(hashedConfirmPassword);
+        
+        if (user.getConfirmPassword().equals(user.getPassword())){
+            repository.save(newUser);
+        }
         return 1;
 
     }
