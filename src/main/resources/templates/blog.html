@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+<div class="container">
+    <h1 class="display-6">Current Blogs</h1>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Author</th>
+            <th>Address</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="blog : ${blogs}">
+            <td th:text="${blog.nameAuthor}"></td>
+            <td th:text="${blog.address}"></td>
+            <td th:text="${blog.rating}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
