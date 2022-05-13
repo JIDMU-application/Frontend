@@ -1,7 +1,7 @@
-package JIDMU.theblog.service;
+package JIDMU.product.service;
 
-import JIDMU.theblog.model.User;
-import JIDMU.theblog.repository.UserRepository;
+import JIDMU.product.model.User;
+import JIDMU.product.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package JIDMU.theblog.config;
+package JIDMU.product.config;
 
-import JIDMU.theblog.service.UserDetailsServiceImp;
+import JIDMU.product.service.UserDetailsServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,11 +33,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .and()
                     .formLogin()
                     .loginPage("/login")
-                    .defaultSuccessUrl("/blog", true)
+                    .defaultSuccessUrl("/product", true)
                     .permitAll()
                     .and()
                     .oauth2Login()
-                    .defaultSuccessUrl("/blog", true)
+                    .defaultSuccessUrl("/product", true)
                     .and()
                     .logout()
                     .logoutUrl("/logout")

@@ -1,16 +1,14 @@
-package JIDMU.theblog.service;
+package JIDMU.product.service;
 
-import JIDMU.theblog.model.User;
-import JIDMU.theblog.repository.UserRepository;
+import JIDMU.product.model.User;
+import JIDMU.product.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class UserDetailsServiceImp implements UserDetailsService {

@@ -1,4 +1,4 @@
-package JIDMU.theblog.model;
+package JIDMU.product.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

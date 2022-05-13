@@ -9,21 +9,23 @@
 <body>
 <div th:insert="fragments/header :: header"></div>
 <div class="container">
-    <h1 class="display-6">Current Blogs</h1>
+    <h1 class="display-6">Availaible Products</h1>
 
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>Author</th>
-            <th>Address</th>
-            <th>Rating</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Stock</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="blog : ${blogs}">
-            <td th:text="${blog.nameAuthor}"></td>
-            <td th:text="${blog.address}"></td>
-            <td th:text="${blog.rating}"></td>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.price}"></td>
+            <td th:text="${product.category}"></td>
+            <td th:text="${product.stock}"></td>
         </tr>
         </tbody>
     </table>

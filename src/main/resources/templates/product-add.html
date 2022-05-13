@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>JIDMU Product Selection Website</title>
+  <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+<div class="container">
+  <h1 class="display-6">Create Blog</h1>
+
+  <form th:action="@{/product/add}" method="POST">
+    <div class="mb-3">
+      <label for="productNameInput" class="form-label">Product Name</label>
+      <input id="productNameInput" type="text" class="form-control" name="productName">
+    </div>
+    <div class="mb-3">
+      <label for="priceInput" class="form-label">Price</label>
+      <input id="priceInput" type="text" class="form-control" name="price">
+    </div>
+    <div class="mb-3">
+      <label for="categoryInput" class="form-label">Category</label>
+      <input id="categoryInput" type="text" class="form-control" name="category">
+    </div>
+    <div class="mb-3">
+      <label for="stockInput" class="form-label">In Stock Now</label>
+      <input id="stockInput" type="text" class="form-control" name="stock">
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
+</body>
+</html>

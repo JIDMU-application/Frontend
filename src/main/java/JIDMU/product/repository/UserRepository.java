@@ -1,6 +1,6 @@
-package JIDMU.theblog.repository;
+package JIDMU.product.repository;
 
-import JIDMU.theblog.model.User;
+import JIDMU.product.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package JIDMU.theblog.controller;
+package JIDMU.product.controller;
 
-import JIDMU.theblog.model.User;
-import JIDMU.theblog.service.SignupService;
+import JIDMU.product.model.User;
+import JIDMU.product.service.SignupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
