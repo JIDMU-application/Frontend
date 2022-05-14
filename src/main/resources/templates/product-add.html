@@ -18,15 +18,20 @@
     </div>
     <div class="mb-3">
       <label for="priceInput" class="form-label">Price</label>
-      <input id="priceInput" type="text" class="form-control" name="price">
+      <input id="priceInput" type="number" class="form-control" name="price">
     </div>
     <div class="mb-3">
       <label for="categoryInput" class="form-label">Category</label>
-      <input id="categoryInput" type="text" class="form-control" name="category">
+      <select name="category" id="categoryInput" class="form-control">
+        <option value="Food">Food</option>
+        <option value="Sport">Sport</option>
+        <option value="Tech">Tech</option>
+        <option value="Kid">Kids</option>
+      </select>
     </div>
     <div class="mb-3">
       <label for="stockInput" class="form-label">In Stock Now</label>
-      <input id="stockInput" type="text" class="form-control" name="stock">
+      <input id="stockInput" type="number" class="form-control" name="stock">
     </div>
     <button type="submit" class="btn btn-primary">Add</button>
   </form>
