@@ -5,6 +5,9 @@ import JIDMU.product.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.modelmapper.ModelMapper;
+import JIDMU.product.dto.SignupDTO;
+import java.time.Instant;
 
 @Service
 public class SignupService {
@@ -15,42 +18,30 @@ public class SignupService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private ModelMapper modelMapper;
+
     public boolean isUsernameAvailable(String username) {
         return repository.findByUsername(username) == null;
     }
 
-    public int getValidationStatus(User user, String passwordValidator){
-        if (user.getFirstName().isBlank() || user.getFirstName().isEmpty()){
-            return 101;
-        }
-        if (user.getLastName().isBlank() || user.getLastName().isEmpty()){
-            return 102;
-        }
-        if (user.getUsername().isBlank() || user.getUsername().isEmpty()){
-            return 103;
-        }
-        if (user.getPassword().isBlank() || user.getPassword().isEmpty()){
-            return 104;
-        }
+    public boolean isValid(SignupDTO user, String passwordValidator){
         if (!passwordValidator.equals(user.getPassword())){
-            return 105;
+            return false;
         }
-        return 1;
+        return true;
     }
 
-    public String createUser(User user, String passwordValidator) {
-        User newUser = new User();
-        int validationStatus = getValidationStatus(user, passwordValidator);
-        if (validationStatus == 1){
+    public boolean createUser(SignupDTO user, String passwordValidator) {
+        User newUser = modelMapper.map(user, User.class);
+        if (isValid(user, passwordValidator)){
             String hashedPassword = passwordEncoder.encode(user.getPassword());
-            newUser.setFirstName(user.getFirstName());
-            newUser.setLastName(user.getLastName());
-            newUser.setUsername(user.getUsername());
             newUser.setPassword(hashedPassword);
+            newUser.setCreatedAt(Instant.now());
             repository.save(newUser);
-            return "success";
+            return true;
         }
-        return "error: " + validationStatus;
+        return false;
     }
 
     public User getUser(String username) {

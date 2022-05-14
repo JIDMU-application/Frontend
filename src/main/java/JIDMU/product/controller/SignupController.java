@@ -8,6 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import JIDMU.product.dto.SignupDTO;
+import org.springframework.validation.BindingResult;
+import javax.validation.Valid;
 
 @Controller
 public class SignupController {
@@ -16,14 +19,18 @@ public class SignupController {
     private SignupService signupService;
 
     @GetMapping("/signup")
-    public String getSignupPage() {
+    public String getSignupPage(SignupDTO user) {
         return "signup"; // return signup.html
     }
 
     @PostMapping("/signup")
-    public String signupUser(@ModelAttribute User user,
+    public String signupUser(@Valid SignupDTO user,
+                             BindingResult result,
                              Model model,
                              @ModelAttribute("confirmPassword") String passwordValidator) {
+
+        if (result.hasErrors())
+            return "signup";
 
         String signupError = null;
 
@@ -32,23 +39,9 @@ public class SignupController {
         }
 
         if (signupError == null) {
-            String rowsAdded = signupService.createUser(user, passwordValidator);
-            switch (rowsAdded) {
-                case "error: 101":
-                    signupError = "Firstname must not be empty";
-                    break;
-                case "error: 102":
-                    signupError = "Lastname must not be empty";
-                    break;
-                case "error: 103":
-                    signupError = "Username must not be empty";
-                    break;
-                case "error: 104":
-                    signupError = "Password must not be empty";
-                    break;
-                case "error: 105":
-                    signupError = "Password confirmation fail";
-                    break;
+            boolean rowsAdded = signupService.createUser(user, passwordValidator);
+            if (!rowsAdded) {
+                signupError = "Password confirmation fail";
             }
         }
 
@@ -59,7 +52,7 @@ public class SignupController {
         else {
             model.addAttribute("signupError", signupError);
         }
-
+        model.addAttribute("signupDto", new SignupDTO());
         return "signup";
     }
 }

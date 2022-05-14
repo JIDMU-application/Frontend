@@ -1,8 +1,8 @@
 package JIDMU.product.controller;
 
 
-import JIDMU.product.model.Product;
-import JIDMU.product.repository.ProductRepository;
+import JIDMU.product.dto.ProductDTO;
+import JIDMU.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ProductController {
 
     @Autowired
-    private ProductRepository repository;
+    private ProductService productService;
 
     @GetMapping("/product")
     public String getBlogPage(Model model) {
-        model.addAttribute("products", repository.findAll());
+        model.addAttribute("products", productService.getProduct());
         return "product";  // return product.html
     }
 
@@ -28,9 +28,10 @@ public class ProductController {
     }
 
     @PostMapping("/product/add")
-    public String addProduct(@ModelAttribute Product product,
+    public String addProduct(@ModelAttribute ProductDTO product,
                                 Model model) {
-        repository.save(product);
+//        repository.save(product);
+        productService.create(product);
         return "redirect:/product";
     }
 
