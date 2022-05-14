@@ -1,6 +1,7 @@
 package JIDMU.product.service;
 
-import JIDMU.product.dto.ProductDTO;
+import JIDMU.product.dto.ProductRequest;
+import JIDMU.product.dto.ProductResponse;
 import JIDMU.product.model.Product;
 import JIDMU.product.repository.ProductRepository;
 import org.modelmapper.ModelMapper;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -19,21 +21,27 @@ public class ProductService {
     @Autowired
     private ModelMapper modelMapper;
 
-    //   ----> we are mapping DAO → DTO
-    public List<ProductDTO> getProduct() {
-        List<Product> restaurants = repository.findAll();
+    public ProductResponse getProductById(UUID productId) {
+        Product product = repository.findById(productId).get();
+        return modelMapper.map(product, ProductResponse.class);
+    }
 
-        List<ProductDTO> dtos = restaurants
+
+    //   ----> we are mapping DAO → DTO
+    public List<ProductResponse> getProduct() {
+        List<Product> products = repository.findAll();
+
+        List<ProductResponse> dtos = products
                 .stream()
-                .map(restaurant -> modelMapper.map(restaurant,
-                        ProductDTO.class))
+                .map(product -> modelMapper.map(product,
+                        ProductResponse.class))
                 .collect(Collectors.toList());
 
         return dtos;
     }
 
-    public void create(ProductDTO productDto) {
-        Product product = modelMapper.map(productDto,
+    public void create(ProductRequest productRequest) {
+        Product product = modelMapper.map(productRequest,
                 Product.class);
         product.setCreatedAt(Instant.now());
         repository.save(product);
