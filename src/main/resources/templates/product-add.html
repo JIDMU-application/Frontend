@@ -18,6 +18,11 @@
       <div class="alert alert-warning" th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}"></div>
     </div>
     <div class="mb-3">
+      <label for="productImgInput" class="form-label">Product Image Link</label>
+      <input id="productImgInput" th:field="*{imgLink}" type="text" class="form-control" name="imgLink">
+      <div class="alert alert-warning" th:if="${#fields.hasErrors('imgLink')}" th:errors="*{imgLink}"></div>
+    </div>
+    <div class="mb-3">
       <label for="priceInput" class="form-label">Price</label>
       <input id="priceInput" type="number" class="form-control" th:field="*{price}" name="price">
     </div>

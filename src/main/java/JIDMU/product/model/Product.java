@@ -18,6 +18,7 @@ public class Product {
     @GeneratedValue
     private UUID id;
     private String productName;
+    private String imgLink;
     private String price;
     private String category;
     private int stock;

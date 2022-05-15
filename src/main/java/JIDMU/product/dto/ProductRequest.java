@@ -10,6 +10,9 @@ public class ProductRequest {
     @NotBlank
     private String productName;
 
+    @NotBlank
+    private String imgLink;
+
     @NotNull
     @Range(min=1)
     private Integer price;

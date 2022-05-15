@@ -15,6 +15,7 @@
         <thead>
         <tr>
             <th>Product Name</th>
+            <th>Product Img Link</th>
             <th>Price</th>
             <th>Category</th>
             <th>Stock</th>
@@ -24,6 +25,7 @@
         <tbody>
         <tr th:each="product : ${products}">
             <td th:text="${product.productName}"></td>
+            <td><img th:src="${product.imgLink}" style="width:100px;"/></td>
             <td th:text="${product.price}"></td>
             <td th:text="${product.category}"></td>
             <td th:text="${product.stock}"></td>
