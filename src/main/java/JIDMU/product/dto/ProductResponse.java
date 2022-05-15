@@ -9,7 +9,7 @@ import java.util.UUID;
 public class ProductResponse {
     private UUID id;
     private String productName;
-    private String price;
+    private int price;
     private String category;
     private int stock;
 }
