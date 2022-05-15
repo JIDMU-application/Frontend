@@ -1,15 +1,16 @@
 package JIDMU.product.controller;
 
-import JIDMU.product.model.User;
+import JIDMU.product.annotation.RequiresCaptcha;
+import JIDMU.product.dto.CaptchaRequest;
 import JIDMU.product.service.SignupService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import JIDMU.product.dto.SignupDTO;
 import org.springframework.validation.BindingResult;
+
 import javax.validation.Valid;
 
 @Controller
@@ -54,5 +55,13 @@ public class SignupController {
         }
         model.addAttribute("signupDto", new SignupDTO());
         return "signup";
+    }
+
+    @PostMapping("/captcha")
+    @ResponseStatus(code = HttpStatus.OK)
+    //custom annotation
+    @RequiresCaptcha
+    public String captcha(@RequestBody final CaptchaRequest dto) {
+        return "captcha";
     }
 }
