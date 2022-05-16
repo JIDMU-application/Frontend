@@ -13,12 +13,13 @@
 <div class="container">
     <h1 class="display-6">Add Review</h1>
 
-    <form th:action="@{/review/add}" method="POST">
+    <form th:action="@{/review/add}"  th:object="${reviewRequest}" method="POST">
 
         <input type="hidden" name="productId" th:value="${productId}" id="product   Id">
 
             <label for="reviewTextInput" class="form-label">Review</label>
-            <input id="reviewTextInput" type="text" class="form-control" name="reviewText">
+            <input id="reviewTextInput" type="text" class="form-control" th:field="*{reviewText}" name="reviewText">
+            <div class="alert alert-warning" th:if="${#fields.hasErrors('reviewText')}" th:errors="*{reviewText}"></div>
         <button type="submit" class="btn btn-primary">Add Review</button>
     </form>
 </div>
