@@ -7,11 +7,10 @@ import JIDMU.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.BindingResult;
 import javax.validation.Valid;
+import java.util.UUID;
 
 @Controller
 public class ProductController {
@@ -39,6 +38,12 @@ public class ProductController {
             return "product-add";
 //        repository.save(product);
         productService.create(product);
+        return "redirect:/product";
+    }
+
+    @DeleteMapping("/product/delete/{productId}")
+    public String deleteOrder(@PathVariable(value = "productId") UUID productId) {
+        productService.deleteByID(productId);
         return "redirect:/product";
     }
 

@@ -46,5 +46,9 @@ public class ProductService {
         product.setCreatedAt(Instant.now());
         repository.save(product);
     }
+
+    public void deleteByID(UUID productID) {
+        repository.deleteById(productID);
+    }
 }
 

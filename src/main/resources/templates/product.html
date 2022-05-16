@@ -33,6 +33,13 @@
                 <a class="btn btn-primary"
                    th:href="@{/review/{id}(id=${product.id})}">Review</a>
             </td>
+            <td style="text-align: center">
+                <form action="#" th:action="@{'/product/delete/{productId}'(productId=${product.id})}" th:method="delete" >
+                    <button type="submit" class="btn btn-danger">
+                        Delete
+                    </button>
+                </form>
+            </td>
         </tr>
         </tbody>
     </table>
