@@ -19,13 +19,13 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/product")
-    public String getBlogPage(Model model) {
+    public String getProducts(Model model) {
         model.addAttribute("products", productService.getProduct());
         return "product";  // return product.html
     }
 
     @GetMapping("/product/add")
-    public String getAddPage(ProductRequest productRequest) {
+    public String getAddProduct(ProductRequest productRequest) {
         return "product-add";  // return product-add.html
     }
 
@@ -42,7 +42,7 @@ public class ProductController {
     }
 
     @DeleteMapping("/product/delete/{productId}")
-    public String deleteOrder(@PathVariable(value = "productId") UUID productId) {
+    public String deleteProduct(@PathVariable(value = "productId") UUID productId) {
         productService.deleteByID(productId);
         return "redirect:/product";
     }
