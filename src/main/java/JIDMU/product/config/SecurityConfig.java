@@ -1,5 +1,6 @@
 package JIDMU.product.config;
 
+import JIDMU.product.config.filter.CorsFilter;
 import JIDMU.product.service.UserDetailsServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -12,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserService;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
+import org.springframework.security.web.session.SessionManagementFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -23,16 +25,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private OidcUserService oidcUserService;
 
+    @Bean
+    CorsFilter corsFilter() {
+        CorsFilter filter = new CorsFilter();
+        return filter;
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
             http
+                    .addFilterBefore(corsFilter(), SessionManagementFilter.class) //adds custom CorsFilter
+                    .csrf().disable()
                     .authorizeRequests()
                     .antMatchers("/home", "/signup",
                         "/css/**", "/js/**", "/images/*").permitAll()
 
                     .antMatchers("/product/add")
                     .access("hasRole('ROLE_ADMIN')")
-
+                    .antMatchers("/product/delete")
+                    .access("hasRole('ROLE_ADMIN')")
                     .anyRequest().authenticated()
                     .and()
                     .formLogin()

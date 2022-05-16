@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 import java.security.Principal;
 
-
 @Controller
 @RequestMapping("/review")
 public class ReviewController {
