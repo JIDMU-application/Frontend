@@ -23,4 +23,6 @@ public class ProductRequest {
     @NotNull
     @Range(min=1, max=999)
     private Integer stock;
+
+    private String recaptcha;
 }

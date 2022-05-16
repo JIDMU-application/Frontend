@@ -1,6 +1,7 @@
 package JIDMU.product.controller;
 
 
+import JIDMU.product.annotation.RequiresCaptcha;
 import JIDMU.product.dto.ProductRequest;
 import JIDMU.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,7 @@ public class ProductController {
     }
 
     @PostMapping("/product/add")
+    @RequiresCaptcha
     public String addProduct(@Valid ProductRequest product,
                              BindingResult result,
                              Model model) {
