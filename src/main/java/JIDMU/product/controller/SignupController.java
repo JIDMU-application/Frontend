@@ -25,6 +25,7 @@ public class SignupController {
     }
 
     @PostMapping("/signup")
+    @RequiresCaptcha
     public String signupUser(@Valid SignupDTO user,
                              BindingResult result,
                              Model model,
@@ -55,13 +56,5 @@ public class SignupController {
         }
         model.addAttribute("signupDto", new SignupDTO());
         return "signup";
-    }
-
-    @PostMapping("/captcha")
-    @ResponseStatus(code = HttpStatus.OK)
-    //custom annotation
-    @RequiresCaptcha
-    public String captcha(@RequestBody final CaptchaRequest dto) {
-        return "captcha";
     }
 }

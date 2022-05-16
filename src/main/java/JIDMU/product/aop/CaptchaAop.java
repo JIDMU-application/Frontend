@@ -12,6 +12,13 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.security.Principal;
+import java.util.Map;
+import java.util.Scanner;
 
 @Slf4j
 @Aspect
@@ -30,13 +37,13 @@ public class CaptchaAop {
             throws Throwable {
         final HttpServletRequest request =
                 ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
-        //receives the captcha header from the request
-        final String captchaResponse = request.getHeader("captcha-response");
+        Map<String, String[]> map = request.getParameterMap();
+        String captchaResponse = map.get("g-recaptcha-response")[0];
         //sends it to the service method for validation
         final boolean isValidCaptcha = service.validateCaptcha(captchaResponse);
         if (!isValidCaptcha) {
             log.info("Throwing forbidden exception as the captcha is invalid.");
-            throw new ForbiddenException("INVALID_CAPTCHA");
+            return null;
         }
         //if everything is ok the response is returned
         return point.proceed();
