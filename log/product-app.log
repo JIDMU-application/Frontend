@@ -12169,3 +12169,175 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: The database is open in excl
 2022-05-17 10:55:45.819  INFO 12604 --- [http-nio-8090-exec-10] J.p.service.ValidateCaptchaService       : Captcha API response = CaptchaResponse(success=true, challengeTs=2022-05-17T03:55:35, hostname=localhost, errorCodes=null)
 2022-05-17 10:55:54.868  INFO 12604 --- [http-nio-8090-exec-4] J.p.service.ValidateCaptchaService       : Going to validate the captcha response = 03AGdBq257HjksQcrn77FDwfaH3SPAiDHJVPgDD7dQXZiY_S0UXATPU2gCQu48IbybdUebWYJkCzPHJwDfFEwSIllDjDrqKI9CgxVNvo4qsmNBTeRIw8Qisl6txSvL7ndV1Ugt5VxLTsjrPTp65-4kFErlMIBQp5Efat-Zh9Jxxk3vuBPwsqIj77_birrkXx-6jAHVAbzeghmlDxBQtQtZsRTRivRJt-tqwizQexbFXC4qgCZPtB_0RO7ZO0kFuiSkzW9wTsr-UOxp47D63AP61fPTQpHjyvVSb2DGbyqlIU6F2W6pA7Y8mVQvP5e6pTk_wUZ06jW36CSkH1921AIqDXX4GAMoC91JcoOQB5FfEB2FhWRmx66Y1SFA6vVgR16wS7SjHjQgwlJmlO6_fq8P_ELYNbtreg6kQXfx7ZZPKY8KsKXrtyWzir9yLayBl9NQqhjAxYX5AEYY
 2022-05-17 10:55:54.983  INFO 12604 --- [http-nio-8090-exec-4] J.p.service.ValidateCaptchaService       : Captcha API response = CaptchaResponse(success=true, challengeTs=2022-05-17T03:55:49, hostname=localhost, errorCodes=null)
+2022-05-17 11:13:00.073  INFO 16120 --- [restartedMain] JIDMU.product.JIDMUMApplication          : Starting JIDMUMApplication using Java 11.0.6 on MSI with PID 16120 (C:\year3\Semester2\Soft Secure\product-service\target\classes started by USER in C:\year3\Semester2\Soft Secure\product-service)
+2022-05-17 11:13:00.079  INFO 16120 --- [restartedMain] JIDMU.product.JIDMUMApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-17 11:13:00.139  INFO 16120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-17 11:13:00.140  INFO 16120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-17 11:13:00.945  INFO 16120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-17 11:13:01.008  INFO 16120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2022-05-17 11:13:01.657  INFO 16120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-05-17 11:13:01.664  INFO 16120 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-17 11:13:01.665  INFO 16120 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-17 11:13:01.757  INFO 16120 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-17 11:13:01.758  INFO 16120 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1617 ms
+2022-05-17 11:13:01.788  INFO 16120 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-17 11:13:01.894  INFO 16120 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-17 11:13:01.904  INFO 16120 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:product'
+2022-05-17 11:13:02.004  WARN 16120 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-17 11:13:02.062  INFO 16120 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-17 11:13:02.098  INFO 16120 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-05-17 11:13:02.214  INFO 16120 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-17 11:13:02.293  INFO 16120 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-17 11:13:02.770  INFO 16120 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-17 11:13:02.777  INFO 16120 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-17 11:13:03.351  WARN 16120 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-05-17 11:13:03.352  INFO 16120 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/h2-console/**']
+2022-05-17 11:13:03.398  INFO 16120 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46b0b97c, org.springframework.security.web.context.SecurityContextPersistenceFilter@41e5ec87, org.springframework.security.web.header.HeaderWriterFilter@6eed20c6, org.springframework.security.web.authentication.logout.LogoutFilter@536845aa, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@6ac19480, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@35f2ba0c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f76b411, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@189e7a10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3884d0a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3dce7e3c, JIDMU.product.config.filter.CorsFilter@6eef824b, org.springframework.security.web.session.SessionManagementFilter@53152b31, org.springframework.security.web.access.ExceptionTranslationFilter@58f23be9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f519046]
+2022-05-17 11:13:03.714  INFO 16120 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-17 11:13:03.744  INFO 16120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-05-17 11:13:03.753  INFO 16120 --- [restartedMain] JIDMU.product.JIDMUMApplication          : Started JIDMUMApplication in 4.15 seconds (JVM running for 5.838)
+2022-05-17 11:13:10.842  INFO 16120 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-17 11:13:10.844  INFO 16120 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-17 11:13:10.845  INFO 16120 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-17 11:13:19.810  WARN 16120 --- [http-nio-8090-exec-7] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [480] milliseconds.
+2022-05-17 11:14:10.101  INFO 16120 --- [http-nio-8090-exec-5] J.p.service.ValidateCaptchaService       : Going to validate the captcha response = 03AGdBq27VrrnZ3xCqsBupUnSnP0QukAsqSU_HP2ODJOcJ1A28S5Uei1iaNPgFSHBbqsr2UDH3wb88dQYm4K_bIVHYvyXg3L5v-wAxAPL-YlfxO7DyvgD8hi5KGiE6vXk3hm73jpv6hO9HQ8yoEgw8DvykLDcTC22KhYJNsSFMcyvVWNxuVigEndbGiCw5lE2pHf-JcOJ6JplKV6NpnTQ10awGM6qEewdAkLPyqtfj8vThHFtz22dTexLCdSyH97Jb_MdKH_mBNJyhDGgkbU5G3Bg8XXBrtUsHmZMzPnAU2WpB4bQTJa8pbYw9wtZWFUmoPAfoxmumjhhvzKl8aa63Ch8Ep7LxcnxElWCfm6Md_95BBPgjts3Ylsqj4S5NylNj6Acd1_qeQUl4pkfzpq2Dmu4PLJW53LJuF3vkgRXsmUEST7mE8vUwyHWuprWym3aIOw8u51bSQjAu
+2022-05-17 11:14:10.386  INFO 16120 --- [http-nio-8090-exec-5] J.p.service.ValidateCaptchaService       : Captcha API response = CaptchaResponse(success=true, challengeTs=2022-05-17T04:13:32, hostname=localhost, errorCodes=null)
+2022-05-17 11:14:31.682  INFO 16120 --- [http-nio-8090-exec-1] J.p.service.ValidateCaptchaService       : Going to validate the captcha response = 03AGdBq27OgrZAL-UpWFQ58A6sOewBmAn6yd1loVrDnXi9AU2Zs_HYAqQWvgvGbHaPpoYOyvufQ2D6U-I1EKYrgg6hYnyZvaxpAyvq418eFa5Nh9pNHtVbKBgkpavTR82x_aXz2UOcFsYXhNz8NGt9kypi_fNyybaTtSXEt2thIPox_FmerzDaJjLzyusvSmxDW53QC_fmSTRtjmdQ5wj5yq3eCwjIjrWDX9DBFymDmOe46j6hws0Ok-Ssme_Y-1wTgABHjsyb4g7-L0WCSsS7hfY6jQQFCWl0mVm4F8BAjN7i_gUyiItVYJ1wZjdYl9c3jtBcCjyLctsGRFfPOypZwWDAZe7CaTx6mE8RiSK9J4AHONfSdCocxylvLEpuRnDNyBwEaDdN8oPQoZag-Pwpuzu-kcePY4Ec_tjxNLaOPMhLXydg8D8C8XAbNInMteThFH4yi4VkWjAw
+2022-05-17 11:14:31.809  INFO 16120 --- [http-nio-8090-exec-1] J.p.service.ValidateCaptchaService       : Captcha API response = CaptchaResponse(success=true, challengeTs=2022-05-17T04:14:11, hostname=localhost, errorCodes=null)
+2022-05-17 11:14:41.722  INFO 16120 --- [http-nio-8090-exec-7] J.product.service.UserDetailsServiceImp  : Ingg has successfully logged in at 2022-05-17T04:14:41.721501Z
+2022-05-17 11:15:03.027  INFO 16120 --- [http-nio-8090-exec-1] J.p.service.ValidateCaptchaService       : Going to validate the captcha response = 03AGdBq25jc-kR8mB8y1VwzprKcIBkoylFERu1LA2P6UwLvJdEl9UsRDYAyJOZbA1rDReagnydSGPr9ZDBHHBvDNhuIuCPDvEjVnF_eX9N_2G2nsRwFywI9taJvS8-7qvnzKbXrnP7Zo1a0yKDUuFP1blDfba3n1ij7-K1cKFvui4N9LfmPOIL5A2fr-m7UivQR3xxgpsrf0CMTHVDoqUb9A1ucEgyU5P89X3283075pFKLrk65K3JC2y9e1fUpdRqkZCmXMq65WxIGS40YjhMJG1mOHzGwdAMNvEGahAnqdvNayiZTk8E4Teijmr0wTdJkfd6SVCrcmdiywDA4WkbzLbomfBxdJYQlzGDmEhKBokkKXIf58upzng9i3ZpU-N66KZSa-HK59YRboq9oMd5Z5Se85fKRccZ9cEjdmog1HIfwWv8Bct3AKBFJ3gp2jz8m6k2O-TGdQlA
+2022-05-17 11:15:03.220  INFO 16120 --- [http-nio-8090-exec-1] J.p.service.ValidateCaptchaService       : Captcha API response = CaptchaResponse(success=true, challengeTs=2022-05-17T04:14:44, hostname=localhost, errorCodes=null)
+2022-05-17 11:15:10.270 ERROR 16120 --- [http-nio-8090-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8091/api/review/7ceb0a01-d7d1-4565-a979-e14b419baf07": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+
+java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[na:na]
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:608) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:557) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1248) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602) ~[spring-web-5.3.19.jar:5.3.19]
+	at JIDMU.product.service.ReviewService.getProductReview(ReviewService.java:52) ~[classes/:na]
+	at JIDMU.product.controller.ReviewController.getReviewPage(ReviewController.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at JIDMU.product.config.filter.CorsFilter.doFilter(CorsFilter.java:24) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at JIDMU.product.config.filter.CorsFilter.doFilter(CorsFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:219) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:219) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178) ~[spring-security-oauth2-client-5.6.1.jar:5.6.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2022-05-17 11:17:32.980  INFO 16120 --- [http-nio-8090-exec-7] J.p.service.ValidateCaptchaService       : Going to validate the captcha response = 03AGdBq27m-zDNZH44YjN55e2g8_S5FOoKFuETmBjGTZtDg3S6pHNEk3W-02lLZeu1efr8gwsyDaFuC1JLfZ_Av3QIFcRNx3sgn2GBu5vNgQN2oCF163fXlA7-XWnVH-RD0ZVRuwudEJlGOq51R-nPvzGsXa-MMFFQYt9wN9Lrz4AWx3MSeIDXeNI4L1xA6HZPNVoguFRu1hX5rCuxsz50IMZQOBq-BQfAaFlOXqXUZV5Or-7J_fSmqac_CvB0zLmBzrvOERJ0u4VvphpZQl893oBOLdHLPxYEtu61q7YzEHZg5831cnz5dIWT_lVoLtNOsIOm0PBUCRxp2OSb9LdIoIEEJIAiRshhVZaQz2pkJlUNHc-u5fb3U4yRBz_mmoJIm-zmOeWeFTFBm1yC3j9xuXZPnA3qp8ZkvDl-78czj9oTvnjJh3Hwl9eTEqxc7eq-YTGU3kl08U8U
+2022-05-17 11:17:34.189  INFO 16120 --- [http-nio-8090-exec-7] J.p.service.ValidateCaptchaService       : Captcha API response = CaptchaResponse(success=true, challengeTs=2022-05-17T04:17:09, hostname=localhost, errorCodes=null)

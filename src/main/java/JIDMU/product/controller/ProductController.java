@@ -19,7 +19,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/product")
-    public String getBlogPage(Model model) {
+    public String getProductPage(Model model) {
         model.addAttribute("products", productService.getProduct());
         return "product";  // return product.html
     }
